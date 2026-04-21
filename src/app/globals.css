@@ -1,0 +1,183 @@
+@import "tailwindcss";
+
+/* ── Brand Color Palette ─────────────────────────── */
+:root {
+	--color-charcoal: #022636;
+	/* Deep navy — body text, dark UI elements */
+	--color-navy: #000000;
+	/* Pure black — primary backgrounds, navbar, hero */
+	--color-silver: #c0c9ce;
+	/* Cool silver-gray — secondary text, borders, dividers */
+	--color-blue: #2f7cab;
+	/* Steel blue — CTAs, links, highlights, active states */
+	--color-offwhite: #f1f1f1;
+	/* Off-white — page background, card backgrounds */
+	--color-blue-hover: #265f85;
+	/* CTA hover — blue darkened 10% */
+}
+
+/* ── Montserrat Font Face ────────────────────────── */
+@font-face {
+	font-family: 'Montserrat';
+	src: url('/Fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('/Fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+	font-weight: 100 900;
+	font-style: italic;
+	font-display: swap;
+}
+
+@theme inline {
+	--color-primary-dark: var(--color-navy);
+	--color-primary-light: var(--color-offwhite);
+	--color-primary-text-dark: var(--color-offwhite);
+	--color-primary-text-light: var(--color-charcoal);
+	--color-accent: var(--color-blue);
+	--color-secondary-text: var(--color-silver);
+	--font-sans: 'Montserrat', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* ── Base Styles ─────────────────────────────────── */
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	color: var(--color-charcoal);
+	background-color: var(--color-offwhite);
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: 'Montserrat', sans-serif;
+	color: var(--color-navy);
+	font-weight: 600;
+}
+
+/* ── Holographic shimmer keyframes ────────────────── */
+@keyframes holo {
+	0% {
+		filter: hue-rotate(0deg) brightness(1.1);
+	}
+
+	50% {
+		filter: hue-rotate(60deg) brightness(1.3);
+	}
+
+	100% {
+		filter: hue-rotate(0deg) brightness(1.1);
+	}
+}
+
+@keyframes float {
+
+	0%,
+	100% {
+		transform: translateY(0px);
+	}
+
+	50% {
+		transform: translateY(-16px);
+	}
+}
+
+@keyframes pulse-glow {
+
+	0%,
+	100% {
+		box-shadow: 0 0 20px rgba(47, 124, 171, 0.1), 0 0 60px rgba(47, 124, 171, 0.08);
+	}
+
+	50% {
+		box-shadow: 0 0 30px rgba(47, 124, 171, 0.2), 0 0 80px rgba(47, 124, 171, 0.15);
+	}
+}
+
+@keyframes shimmer {
+	0% {
+		background-position: -200% 0;
+	}
+
+	100% {
+		background-position: 200% 0;
+	}
+}
+
+@keyframes revealUp {
+	0% {
+		opacity: 0;
+		transform: translateY(24px);
+		filter: blur(10px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+		filter: blur(0);
+	}
+}
+
+@keyframes revealScale {
+	0% {
+		opacity: 0;
+		transform: scale(0.92) translateY(12px);
+		filter: blur(10px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1) translateY(0);
+		filter: blur(0);
+	}
+}
+
+/* ── Glassmorphism Navbar ────────────────────────── */
+.glass-navbar {
+	background: rgba(30, 30, 40, 0.45);
+	backdrop-filter: blur(56px) saturate(180%);
+	-webkit-backdrop-filter: blur(56px) saturate(180%);
+	border-radius: 9999px;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	box-shadow:
+		0 8px 32px rgba(0, 0, 0, 0.2),
+		inset 0 1px 2px rgba(255, 255, 255, 0.4),
+		inset 0 -1px 2px rgba(0, 0, 0, 0.1);
+	position: relative;
+	overflow: hidden;
+}
+
+/* ── Pin spacer fix for GSAP ──────────────────────── */
+.pin-spacer {
+	flex-shrink: 0 !important;
+}
+
+/* ── Reduced motion preferences ───────────────────── */
+@media (prefers-reduced-motion: reduce) {
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+
+	.service-object {
+		opacity: 1 !important;
+		transform: none !important;
+	}
+
+	.highlight-word {
+		transition: none !important;
+	}
+}
