@@ -231,7 +231,7 @@ export function InsightsSection() {
   return (
     <section className="bg-[var(--color-offwhite)] px-5 py-12 sm:px-6 md:px-12 md:py-28">
       <div className="mx-auto max-w-7xl">
-        <h2 className="text-[2.6rem] md:text-[clamp(3rem,5vw,3.75rem)] font-normal tracking-[-0.03em] text-[#111111] md:text-[var(--color-navy)] mb-4 md:mb-12">Insights</h2>
+        <h2 className="text-[2.6rem] md:text-[clamp(3rem,5vw,3.75rem)] !font-light tracking-[-0.03em] text-[#111111] md:text-[var(--color-navy)] mb-4 md:mb-12">Insights</h2>
         
         {/* Mobile View */}
         <div className="flex flex-col md:hidden">
@@ -295,7 +295,7 @@ export function InsightsPageContent() {
     <main className="bg-[var(--color-offwhite)] px-4 py-8 text-[var(--color-charcoal)] sm:px-6 md:px-12 md:py-10">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col gap-6 border-b border-[var(--color-silver)] pb-8 lg:flex-row lg:items-center lg:justify-between">
-          <h1 className="text-[clamp(3rem,5vw,4rem)] font-normal tracking-[-0.05em] text-[var(--color-navy)]">Insights</h1>
+          <h1 className="text-[clamp(3rem,5vw,4rem)] !font-light tracking-[-0.05em] text-[var(--color-navy)]">Insights</h1>
           <div className="flex flex-wrap gap-3">
             {['Blogs', 'News', 'Events'].map((filter, index) => (
               <button

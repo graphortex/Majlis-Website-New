@@ -75,7 +75,7 @@ export default function WhatWeDoSection() {
   return (
     <section className="bg-[var(--color-offwhite)] px-4 py-16 text-[var(--color-charcoal)] sm:px-6 md:px-12 md:py-28">
       <div className="mx-auto max-w-7xl">
-        <h2 className="mb-8 md:mb-12 text-[2.6rem] md:text-[clamp(3rem,5vw,3.5rem)] font-normal tracking-[-0.03em] md:tracking-[-0.05em] text-[#111111] md:text-[var(--color-navy)]">
+        <h2 className="mb-8 md:mb-12 text-[2.6rem] md:text-[clamp(3rem,5vw,3.5rem)] !font-light tracking-[-0.03em] md:tracking-[-0.05em] text-[#111111] md:text-[var(--color-navy)]">
           What We Do
         </h2>
 

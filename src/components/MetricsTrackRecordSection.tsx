@@ -146,10 +146,10 @@ export default function MetricsTrackRecordSection() {
               <span className="text-[14px] font-medium">Our track record</span>
             </div>
 
-            <h2 className="text-[clamp(2.2rem,7vw,3.5rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[var(--color-navy)] md:tracking-[-0.06em]">
-              <span className="block">Metrics that</span>
+            <h2 className="text-[clamp(2.2rem,7vw,3.5rem)] leading-[0.96] tracking-[-0.05em] text-[var(--color-navy)] md:tracking-[-0.06em]">
+              <span className="block !font-light">Metrics that</span>
               <span className="block font-sans text-[1.05em] font-[200] italic tracking-[-0.03em] text-[var(--color-blue)]">Prove</span>
-              <span className="block">value</span>
+              <span className="block !font-light">value</span>
             </h2>
 
             <Link
