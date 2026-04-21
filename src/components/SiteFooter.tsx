@@ -76,8 +76,8 @@ const companyLinks = [
   { href: "/about", label: "About Us" },
   { href: "/contact", label: "Contact" },
   { href: "/insights", label: "Blog" },
-  { href: "#", label: "Partnerships" },
-  { href: "#", label: "Marketplace" },
+  { href: "/privacy-policy", label: "Privacy Policy" },
+  { href: "/terms-of-service", label: "Terms of Service" },
 ];
 
 export default function SiteFooter() {
@@ -218,13 +218,13 @@ export default function SiteFooter() {
             />
 
             <div className="flex items-center gap-5">
-              <Link href="#" className="text-[#888] transition-colors duration-200 hover:text-white">
+              <Link href="/privacy-policy" className="text-[#888] transition-colors duration-200 hover:text-white">
                 Privacy Policy
               </Link>
-              <Link href="#" className="text-[#888] transition-colors duration-200 hover:text-white">
+              <Link href="/terms-of-service" className="text-[#888] transition-colors duration-200 hover:text-white">
                 Terms of Service
               </Link>
-              <Link href="#" className="text-[#888] transition-colors duration-200 hover:text-white">
+              <Link href="/cookie-policy" className="text-[#888] transition-colors duration-200 hover:text-white">
                 Cookie Policy
               </Link>
             </div>
