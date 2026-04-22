@@ -15,9 +15,9 @@ type FeedCard = InsightCard;
 const homepageInsights: InsightCard[] = [
   {
     category: "Feature",
-    readTime: "12 mins read",
+    readTime: "2 mins read",
     date: "Apr 2026",
-    title: "Majlis Studio attended Ripple Collective: April 18 recap.",
+    title: "Majlis Studio reps attended Final Draft.",
     author: "Majlis Studio",
     href: "/insights/ripple-collective-april-18",
     image: "/blog/blog-ripple-collective/ripple-image-1.jpeg",
@@ -26,9 +26,9 @@ const homepageInsights: InsightCard[] = [
 
 const insightsHeroMain: FeedCard = {
   category: "Feature",
-  readTime: "12 mins read",
+  readTime: "2 mins read",
   date: "Apr 2026",
-  title: "Majlis Studio attended Ripple Collective: April 18 recap.",
+  title: "Majlis Studio reps attended Final Draft.",
   author: "Majlis Studio",
   href: "/insights/ripple-collective-april-18",
   image:

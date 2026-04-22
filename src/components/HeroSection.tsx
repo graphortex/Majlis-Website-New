@@ -82,7 +82,7 @@ export default function HeroSection() {
 				className="relative z-10 flex h-full flex-col justify-end px-6 pb-14 sm:px-10 lg:px-16"
 			>
 				{/* Top-left logo for desktop */}
-				<div className="absolute top-6 left-6 sm:top-10 sm:left-10 lg:top-8 lg:left-12 xl:top-10 xl:left-16 hidden md:block">
+				<div className="absolute top-6 left-5 sm:top-8 sm:left-10 lg:top-7 lg:left-12 xl:top-7 xl:left-16 hidden lg:block">
 					<Image
 						src="/logo/majlis-logo-new.png"
 						alt="Majlis Studios"
@@ -104,10 +104,10 @@ export default function HeroSection() {
 						</h1>
 
 						<Link
-							href="/case-studies"
+							href="/services"
 							className="mt-5 inline-flex items-center justify-center rounded-full border border-white/25 bg-white/10 px-6 py-3 text-sm font-medium !text-white backdrop-blur-md transition-colors hover:bg-white/18"
 						>
-							See our work →
+							See our Services →
 						</Link>
 					</div>
 

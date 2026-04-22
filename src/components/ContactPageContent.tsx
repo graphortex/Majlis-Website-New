@@ -51,7 +51,7 @@ export default function ContactPageContent() {
                 <span className="inline-flex w-fit px-3 py-1 text-white md:px-4 md:py-1.5">
                   Take your seat
                 </span>
-                <span className="inline-flex w-fit whitespace-nowrap bg-[var(--color-blue)] px-3 py-1 font-sans italic font-[300] text-[var(--color-offwhite)] shadow-[0_10px_28px_rgba(47,124,171,0.28)] md:px-4 md:py-1.5">
+                <span className="inline-flex w-fit whitespace-nowrap px-3 py-1 font-sans italic font-[300] text-[var(--color-offwhite)] md:px-4 md:py-1.5">
                   in the Majlis
                 </span>
               </h1>

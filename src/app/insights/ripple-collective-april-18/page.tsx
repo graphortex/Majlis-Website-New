@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import RippleCollectiveBlogPost from "../../../components/RippleCollectiveBlogPost";
 
 export const metadata: Metadata = {
-  title: "Majlis Studio Attended Ripple Collective - April 18 | Majlis Studio Blog",
+  title: "Majlis Studio reps attended Final Draft | Majlis Studio Blog",
   description:
-    "Majlis Studio attended Ripple Collective in Abu Dhabi: sessions, workshops, talks, and key takeaways from April 18, 2026.",
+    "A concise 2-minute recap of Majlis Studio reps attending Final Draft in Abu Dhabi.",
 };
 
 export default function RippleCollectiveApril18Page() {

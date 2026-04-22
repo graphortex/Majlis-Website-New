@@ -334,7 +334,7 @@ export default function ServicesPageContent() {
 				<div className="relative mx-auto flex max-w-5xl flex-col items-center text-center">
 					<p className="mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-[var(--color-silver)]/55">Services</p>
 					<h1 className="mx-auto max-w-4xl text-[clamp(3.2rem,7vw,3.8rem)] font-light tracking-[-0.05em] !text-white">
-						What <span className="bg-[var(--color-blue)] px-2 py-1 text-[var(--color-offwhite)]">We Offer</span>
+						What We Offer
 					</h1>
 					<p className="mx-auto mt-5 max-w-[700px] text-[18px] leading-relaxed text-[var(--color-silver)]/85">
 						Integrated digital solutions that elevate customer experience and accelerate brand growth.
@@ -373,7 +373,7 @@ export default function ServicesPageContent() {
 							href="/contact"
 							className="mt-8 inline-flex items-center justify-center rounded-full bg-[var(--color-blue)] px-6 py-3 text-sm font-semibold text-[var(--color-offwhite)] transition-colors hover:bg-[var(--color-blue-hover)]"
 						>
-							Request a quote →
+							Request a free quote →
 						</Link>
 					</div>
 

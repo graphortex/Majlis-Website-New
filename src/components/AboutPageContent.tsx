@@ -93,9 +93,9 @@ export default function AboutPageContent() {
 				>
 				<p className="mb-5 text-xs font-light uppercase tracking-[0.28em] text-[var(--color-silver)]/55">About Majlis Studio</p>
 				<h1 className="text-5xl font-light leading-[0.95] tracking-tight text-[var(--color-offwhite)] md:text-7xl lg:text-8xl flex flex-col items-center gap-3">
-						<span className="text-white">Rooted in heritage.</span>
+						<span className="text-white">Rooted in majlis.</span>
 						<span className="font-sans italic font-[200] text-[var(--color-silver)]">
-							<HighlightLine>built for the future</HighlightLine>
+							built for the future
 						</span>
 					</h1>
 				</motion.div>
