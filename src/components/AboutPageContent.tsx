@@ -91,8 +91,8 @@ export default function AboutPageContent() {
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
 				>
-					<p className="mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-[var(--color-silver)]/55">About Majlis Studio</p>
-					<h1 className="text-5xl font-semibold leading-[0.95] tracking-tight text-[var(--color-offwhite)] md:text-7xl lg:text-8xl flex flex-col items-center gap-3">
+				<p className="mb-5 text-xs font-light uppercase tracking-[0.28em] text-[var(--color-silver)]/55">About Majlis Studio</p>
+				<h1 className="text-5xl font-light leading-[0.95] tracking-tight text-[var(--color-offwhite)] md:text-7xl lg:text-8xl flex flex-col items-center gap-3">
 						<span className="text-white">Rooted in heritage.</span>
 						<span className="font-sans italic font-[200] text-[var(--color-silver)]">
 							<HighlightLine>built for the future</HighlightLine>
@@ -182,9 +182,9 @@ export default function AboutPageContent() {
 								<div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
 									<div className="absolute inset-0 rounded-2xl border border-[var(--color-navy)]/55" />
 								</div>
-								<p className="mb-8 text-sm font-semibold uppercase tracking-[0.24em] text-[var(--color-navy)]/60">{card.id}</p>
-								<div className="space-y-4 text-[var(--color-silver)]">
-									<p className="text-3xl font-semibold tracking-tight text-[var(--color-navy)] md:text-4xl">
+							<p className="mb-8 text-sm font-light uppercase tracking-[0.24em] text-[var(--color-navy)]/60">{card.id}</p>
+							<div className="space-y-4 text-[var(--color-silver)]">
+								<p className="text-3xl font-light tracking-tight text-[var(--color-navy)] md:text-4xl">
 										{card.title}
 									</p>
 									<p className="max-w-sm text-base leading-relaxed text-black md:text-lg">{card.desc}</p>

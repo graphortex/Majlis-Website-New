@@ -70,55 +70,57 @@ export default function ServiceCardsSection() {
         {services.map((service, index) => (
           <article
             key={service.title}
-            className="flex min-h-[220px] flex-row items-center justify-between gap-6 bg-black px-6 py-7 sm:min-h-[240px] sm:px-8 sm:py-8 lg:h-full lg:min-h-0 lg:gap-8 lg:px-10 lg:py-8"
+            className="flex min-h-[220px] flex-row items-center justify-center bg-black px-6 py-7 sm:min-h-[240px] sm:px-8 sm:py-8 lg:h-full lg:min-h-0 lg:px-10 lg:py-8"
           >
-            <div
-              className={`flex max-w-md flex-col transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                isVisible ? "translate-y-0 opacity-100 blur-0" : "translate-y-6 opacity-0 blur-sm"
-              }`}
-              style={{ transitionDelay: `${index * 100}ms`, transitionDuration: "700ms" }}
-            >
-              <h3
-                className="text-[clamp(2.4rem,4vw,3.5rem)] !font-light leading-[0.92] tracking-[-0.04em] !text-white"
-                style={{ fontFamily: "Montserrat, sans-serif" }}
+            <div className="mx-auto flex w-full max-w-[760px] items-center justify-center gap-8 lg:gap-10">
+              <div
+                className={`flex max-w-md flex-col transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                  isVisible ? "translate-y-0 opacity-100 blur-0" : "translate-y-6 opacity-0 blur-sm"
+                }`}
+                style={{ transitionDelay: `${index * 100}ms`, transitionDuration: "700ms" }}
               >
-                {service.title}
-              </h3>
-              <p className="mt-4 max-w-[24ch] text-[14px] font-[300] leading-[1.45] text-white/72 sm:text-[15px] lg:mt-3 lg:text-[14px]">
-                {service.subtitle}
-              </p>
-              <Link
-                href={service.cta}
-                className="mt-7 inline-flex items-center gap-3 text-[13px] font-[300] tracking-wide text-white sm:text-[14px] lg:mt-6"
-              >
-                Learn More
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
+                <h3
+                  className="text-[clamp(2.4rem,4vw,3.5rem)] !font-light leading-[0.92] tracking-[-0.04em] !text-white"
+                  style={{ fontFamily: "Montserrat, sans-serif" }}
                 >
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
+                  {service.title}
+                </h3>
+                <p className="mt-4 max-w-[24ch] text-[14px] font-[300] leading-[1.45] text-white/72 sm:text-[15px] lg:mt-3 lg:text-[14px]">
+                  {service.subtitle}
+                </p>
+                <Link
+                  href={service.cta}
+                  className="mt-7 inline-flex items-center gap-3 text-[13px] font-[300] tracking-wide text-white sm:text-[14px] lg:mt-6"
+                >
+                  Learn More
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
 
-            <div
-              className={`relative shrink-0 h-[100px] w-[100px] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] sm:h-[120px] sm:w-[120px] lg:h-[150px] lg:w-[150px] ${
-                isVisible ? "translate-y-0 scale-100 opacity-100 blur-0" : "translate-y-4 scale-[0.96] opacity-0 blur-sm"
-              }`}
-              style={{ transitionDelay: `${index * 100 + 100}ms`, transitionDuration: "700ms" }}
-            >
-              <Image
-                src={service.image}
-                alt={`${service.title} visual`}
-                fill
-                className="object-contain"
-                sizes="(min-width: 1024px) 150px, 140px"
-                priority={service.title === "Design"}
-              />
+              <div
+                className={`relative shrink-0 h-[100px] w-[100px] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] sm:h-[120px] sm:w-[120px] lg:h-[150px] lg:w-[150px] ${
+                  isVisible ? "translate-y-0 scale-100 opacity-100 blur-0" : "translate-y-4 scale-[0.96] opacity-0 blur-sm"
+                }`}
+                style={{ transitionDelay: `${index * 100 + 100}ms`, transitionDuration: "700ms" }}
+              >
+                <Image
+                  src={service.image}
+                  alt={`${service.title} visual`}
+                  fill
+                  className="object-contain"
+                  sizes="(min-width: 1024px) 150px, 140px"
+                  priority={service.title === "Design"}
+                />
+              </div>
             </div>
           </article>
         ))}

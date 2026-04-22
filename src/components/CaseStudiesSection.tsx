@@ -110,7 +110,7 @@ export function CaseStudiesSection() {
   return (
     <section id="case-studies" className="bg-white px-4 py-20 text-[var(--color-charcoal)] sm:px-6 md:px-12 md:py-28">
       <div className="mx-auto max-w-7xl">
-        <h2 className="mb-10 text-[clamp(3rem,4vw,3.5rem)] font-normal tracking-[-0.06em] text-[var(--color-navy)]">
+        <h2 className="mb-10 text-[clamp(3rem,4vw,3.5rem)] !font-light tracking-[-0.06em] text-[var(--color-navy)]">
           Case Studies
         </h2>
 
@@ -139,7 +139,7 @@ export function CaseStudiesPageContent() {
       <div className="mx-auto max-w-7xl">
         <div className="mb-14 flex flex-col gap-6 border-b border-[var(--color-silver)] pb-8 lg:flex-row lg:items-end lg:justify-between">
           <div className="flex items-start gap-3">
-            <h1 className="text-[clamp(3rem,5vw,3.75rem)] font-normal tracking-[-0.06em] text-[var(--color-navy)]">
+            <h1 className="text-[clamp(3rem,5vw,3.75rem)] !font-light tracking-[-0.06em] text-[var(--color-navy)]">
               Case Studies
             </h1>
             <span className="translate-y-3 text-sm text-[var(--color-silver)]">(137)</span>
