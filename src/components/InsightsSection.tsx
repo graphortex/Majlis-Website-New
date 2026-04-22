@@ -7,17 +7,19 @@ type InsightCard = {
   title: string;
   author: string;
   image: string;
+  href?: string;
 };
 
 type FeedCard = InsightCard;
 
 const homepageInsights: InsightCard[] = [
   {
-    category: "Strategy",
-    readTime: "6 mins read",
+    category: "Feature",
+    readTime: "12 mins read",
     date: "Apr 2026",
-    title: "How premium digital experiences shape trust before the first conversation.",
+    title: "Majlis Studio attended Ripple Collective: April 18 recap.",
     author: "Majlis Studio",
+    href: "/insights/ripple-collective-april-18",
     image:
       "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1400&q=80",
   },
@@ -64,21 +66,23 @@ const insightsHeroLeft: FeedCard[] = [
 
 const insightsHeroMain: FeedCard = {
   category: "Feature",
-  readTime: "8 mins read",
+  readTime: "12 mins read",
   date: "Apr 2026",
-  title: "How we design insight-led digital ecosystems that turn readers into clients.",
-  author: "Omar Khoury",
+  title: "Majlis Studio attended Ripple Collective: April 18 recap.",
+  author: "Majlis Studio",
+  href: "/insights/ripple-collective-april-18",
   image:
     "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1600&q=80",
 };
 
 const mostPopular: FeedCard[] = [
   {
-    category: "Opinion",
-    readTime: "4 mins read",
+    category: "Feature",
+    readTime: "12 mins read",
     date: "Apr 2026",
-    title: "A practical guide to writing headlines that feel calm, clear, and persuasive.",
-    author: "Sana Ali",
+    title: "Majlis Studio attended Ripple Collective: April 18 recap.",
+    author: "Majlis Studio",
+    href: "/insights/ripple-collective-april-18",
     image: "",
   },
   {
@@ -109,11 +113,12 @@ const mostPopular: FeedCard[] = [
 
 const feedCards: FeedCard[] = [
   {
-    category: "Blogs",
-    readTime: "5 mins read",
+    category: "Feature",
+    readTime: "12 mins read",
     date: "Apr 2026",
-    title: "The difference between a premium brand story and a nice-looking website.",
-    author: "Amina Rahman",
+    title: "Majlis Studio attended Ripple Collective: April 18 recap.",
+    author: "Majlis Studio",
+    href: "/insights/ripple-collective-april-18",
     image:
       "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=80",
   },
@@ -218,7 +223,7 @@ function InsightCard({ card, compact = false, showAuthor = false }: { card: Feed
 
 function PopularItem({ card }: { card: FeedCard }) {
   return (
-    <a href="/insights" className="block transition-opacity hover:opacity-80">
+    <a href={card.href ?? "/insights"} className="block transition-opacity hover:opacity-80">
       <p className="text-[12px] text-[var(--color-silver)]">
         {card.category} • {card.readTime} | {card.date}
       </p>
@@ -231,12 +236,12 @@ export function InsightsSection() {
   return (
     <section className="bg-[var(--color-offwhite)] px-5 py-12 sm:px-6 md:px-12 md:py-28">
       <div className="mx-auto max-w-7xl">
-        <h2 className="text-[2.6rem] md:text-[clamp(3rem,5vw,3.75rem)] !font-light tracking-[-0.03em] text-[#111111] md:text-[var(--color-navy)] mb-4 md:mb-12">Insights</h2>
+        <h2 className="text-[2.6rem] md:text-[clamp(3rem,5vw,3.75rem)] !font-light tracking-[-0.03em] text-[#111111] md:text-[var(--color-navy)] mb-4 md:mb-12">Blog</h2>
         
         {/* Mobile View */}
         <div className="flex flex-col md:hidden">
           {homepageInsights.map((card) => (
-            <Link key={card.title} href="/insights" className="flex items-center gap-[18px] py-5 border-b border-black/10">
+            <Link key={card.title} href={card.href ?? "/insights"} className="flex items-center gap-[18px] py-5 border-b border-black/10">
               <div className="relative shrink-0 overflow-hidden bg-[var(--color-silver)]/20 w-[120px] h-[80px]">
                 <div
                   className="absolute inset-0 bg-cover bg-center"
@@ -268,7 +273,7 @@ export function InsightsSection() {
             href="/insights"
             className="flex w-full items-center justify-center gap-3 border border-[#111111] bg-transparent py-[14px] text-[18px] text-[#111111] transition-colors hover:bg-black/5"
           >
-            Explore all insights
+            Explore all blog posts
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M5 12h14"></path>
               <path d="M12 5l7 7-7 7"></path>
@@ -282,7 +287,7 @@ export function InsightsSection() {
             href="/insights"
             className="inline-flex items-center justify-center rounded-full border border-[var(--color-silver)] bg-transparent px-6 py-3 text-sm font-medium text-[var(--color-charcoal)] transition-colors hover:bg-white"
           >
-            Explore all insights →
+            Explore all blog posts →
           </Link>
         </div>
       </div>
@@ -292,10 +297,10 @@ export function InsightsSection() {
 
 export function InsightsPageContent() {
   return (
-    <main className="bg-[var(--color-offwhite)] px-4 py-8 text-[var(--color-charcoal)] sm:px-6 md:px-12 md:py-10">
+    <main className="bg-[var(--color-offwhite)] px-4 pb-8 pt-40 text-[var(--color-charcoal)] sm:px-6 md:px-12 md:pb-10 md:pt-48">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col gap-6 border-b border-[var(--color-silver)] pb-8 lg:flex-row lg:items-center lg:justify-between">
-          <h1 className="text-[clamp(3rem,5vw,4rem)] !font-light tracking-[-0.05em] text-[var(--color-navy)]">Insights</h1>
+          <h1 className="text-[clamp(3rem,5vw,4rem)] !font-light tracking-[-0.05em] text-[var(--color-navy)]">Blog</h1>
           <div className="flex flex-wrap gap-3">
             {['Blogs', 'News', 'Events'].map((filter, index) => (
               <button

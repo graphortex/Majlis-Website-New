@@ -18,6 +18,16 @@ export default function AppShell({ children }: AppShellProps) {
   const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
+    // Prefer native scrolling for browsers/devices where wheel interception can be unreliable.
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const isCoarsePointer = window.matchMedia("(pointer: coarse)").matches;
+    const isFirefox = /firefox/i.test(window.navigator.userAgent);
+    const isBlogPage = pathname.startsWith("/insights");
+
+    if (prefersReducedMotion || isCoarsePointer || isFirefox || isBlogPage) {
+      return;
+    }
+
     const lenis = new Lenis({
       lerp: 0.08,
       smoothWheel: true,

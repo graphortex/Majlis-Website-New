@@ -148,7 +148,7 @@ function OfferAccordion({ items }: { items: OfferAccordionItem[] }) {
 					className={`group border-t border-[var(--color-silver)] ${index === items.length - 1 ? "border-b" : ""}`}
 				>
 					<summary className="flex cursor-pointer list-none items-center justify-between py-4 text-[var(--color-charcoal)] [&::-webkit-details-marker]:hidden">
-						<span className="text-[16px] font-medium">{item.title}</span>
+						<span className="text-[16px] font-light">{item.title}</span>
 						<span className="ml-4 text-xl leading-none text-[var(--color-navy)] group-open:hidden">+</span>
 						<span className="ml-4 hidden text-xl leading-none text-[var(--color-navy)] group-open:inline">-</span>
 					</summary>
@@ -164,13 +164,13 @@ function MobileOfferSectionRow({ section, reverse }: { section: OfferSection; re
 		<section className="py-20 md:py-24 relative isolate border-t border-[var(--color-silver)]/10 first:border-0 md:hidden">
 			<div className="relative mx-auto flex flex-col gap-10">
 				<div>
-					<h2 className="text-[clamp(2.3rem,4.2vw,3rem)] font-normal leading-[1.08] tracking-[-0.04em] text-[var(--color-navy)]">
+					<h2 className="text-[clamp(2.3rem,4.2vw,3rem)] font-light leading-[1.08] tracking-[-0.04em] text-[var(--color-navy)]">
 						{section.title}
 					</h2>
 					<p className="mt-5 max-w-[560px] text-[16px] leading-relaxed text-[var(--color-silver)]">{section.description}</p>
 					<Link
 						href="/contact"
-						className="mt-6 inline-flex text-[14px] font-semibold text-[var(--color-navy)] transition-colors hover:text-[var(--color-charcoal)]"
+						className="mt-6 inline-flex text-[14px] font-light text-[var(--color-navy)] transition-colors hover:text-[var(--color-charcoal)]"
 					>
 						Explore now →
 					</Link>
@@ -198,6 +198,21 @@ function DesktopPinnedOfferSections() {
 	const containerRef = useRef<HTMLDivElement>(null);
 	const textRefs = useRef<(HTMLDivElement | null)[]>([]);
 	const imageRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+	const handlePanelWheel = (event: React.WheelEvent<HTMLDivElement>) => {
+		const panel = event.currentTarget;
+		const atTop = panel.scrollTop <= 0;
+		const atBottom = panel.scrollTop + panel.clientHeight >= panel.scrollHeight - 1;
+		const scrollingUp = event.deltaY < 0;
+		const scrollingDown = event.deltaY > 0;
+
+		// Keep wheel input scoped to this panel so parent/page scroll never chains through.
+		event.stopPropagation();
+
+		if ((scrollingUp && atTop) || (scrollingDown && atBottom)) {
+			event.preventDefault();
+		}
+	};
 
 	useEffect(() => {
 		const container = containerRef.current;
@@ -250,9 +265,10 @@ function DesktopPinnedOfferSections() {
 					<div key={section.title} className="absolute inset-0 px-12 py-16 flex items-center justify-between pointer-events-none">
 						<div
 							ref={el => { textRefs.current[index] = el; }}
-							className="max-w-[55%] lg:max-w-[60%] flex flex-col justify-start h-full pointer-events-auto overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+							onWheel={handlePanelWheel}
+							className="max-w-[55%] lg:max-w-[60%] flex flex-col justify-start h-full pointer-events-auto overflow-y-auto overscroll-contain [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
 						>
-							<h2 className="text-[clamp(2.3rem,4.2vw,3rem)] font-normal leading-[1.08] tracking-[-0.04em] text-[var(--color-navy)] mt-8">
+								<h2 className="text-[clamp(2.3rem,4.2vw,3rem)] font-light leading-[1.08] tracking-[-0.04em] text-[var(--color-navy)] mt-8">
 								{section.title}
 							</h2>
 							<p className="mt-5 max-w-[560px] text-[16px] leading-relaxed text-[var(--color-silver)]">{section.description}</p>
@@ -289,12 +305,38 @@ function DesktopPinnedOfferSections() {
 export default function ServicesPageContent() {
 	return (
 		<div className="text-[var(--color-charcoal)]">
-			<section className="px-4 pt-44 text-center sm:px-6 md:px-12 md:pt-56">
-				<div className="mx-auto max-w-7xl">
-					<h1 className="mx-auto max-w-4xl text-[clamp(3.2rem,7vw,3.5rem)] font-light tracking-[-0.05em] text-[var(--color-navy)]">
-						What We Offer
+			<section className="relative isolate overflow-hidden bg-[var(--color-navy)] px-6 pt-44 pb-24 text-[var(--color-offwhite)] md:px-12 md:pt-56 md:pb-28">
+				<div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+					<svg
+						viewBox="0 0 1440 860"
+						className="h-full w-full max-w-[1400px] opacity-30"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+						aria-hidden
+					>
+						<path
+							d="M240 760 V360 C240 190 390 90 720 90 C1050 90 1200 190 1200 360 V760"
+							stroke="currentColor"
+							className="text-[var(--color-silver)]/35"
+							strokeWidth="1"
+							vectorEffect="non-scaling-stroke"
+						/>
+						<path
+							d="M420 760 V350 C420 250 520 170 720 170 C920 170 1020 250 1020 350 V760"
+							stroke="currentColor"
+							className="text-[var(--color-silver)]/20"
+							strokeWidth="1"
+							vectorEffect="non-scaling-stroke"
+						/>
+					</svg>
+				</div>
+
+				<div className="relative mx-auto flex max-w-5xl flex-col items-center text-center">
+					<p className="mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-[var(--color-silver)]/55">Services</p>
+					<h1 className="mx-auto max-w-4xl text-[clamp(3.2rem,7vw,3.8rem)] font-light tracking-[-0.05em] !text-white">
+						What <span className="bg-[var(--color-blue)] px-2 py-1 text-[var(--color-offwhite)]">We Offer</span>
 					</h1>
-					<p className="mx-auto mt-5 max-w-[700px] text-[18px] leading-relaxed text-[var(--color-silver)]">
+					<p className="mx-auto mt-5 max-w-[700px] text-[18px] leading-relaxed text-[var(--color-silver)]/85">
 						Integrated digital solutions that elevate customer experience and accelerate brand growth.
 					</p>
 				</div>
@@ -321,7 +363,7 @@ export default function ServicesPageContent() {
 			<section className="px-4 py-20 sm:px-6 md:px-12">
 				<div className="mx-auto grid max-w-7xl items-center gap-10 md:grid-cols-2 md:gap-16">
 					<div>
-						<h2 className="text-[clamp(2.3rem,4.6vw,2.8rem)] font-normal leading-[1.1] tracking-[-0.04em] text-[var(--color-navy)]">
+						<h2 className="text-[clamp(2.3rem,4.6vw,2.8rem)] font-light leading-[1.1] tracking-[-0.04em] text-[var(--color-navy)]">
 							Start Your Digital Transformation!
 						</h2>
 						<p className="mt-5 max-w-[560px] text-[16px] leading-relaxed text-[var(--color-silver)]">

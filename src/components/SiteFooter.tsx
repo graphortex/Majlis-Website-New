@@ -75,9 +75,7 @@ const servicesLinks = [
 const companyLinks = [
   { href: "/about", label: "About Us" },
   { href: "/contact", label: "Contact" },
-  { href: "/insights", label: "Blog" },
-  { href: "/privacy-policy", label: "Privacy Policy" },
-  { href: "/terms-of-service", label: "Terms of Service" },
+  { href: "/insights", label: "Blog" }
 ];
 
 export default function SiteFooter() {
