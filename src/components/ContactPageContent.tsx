@@ -48,10 +48,28 @@ export default function ContactPageContent() {
             >
               <p className="mb-5 pt-2 text-xs font-semibold uppercase tracking-[0.28em] text-[var(--color-silver)]/50">Contact Majlis Studio</p>
               <h1 className="flex max-w-[11ch] flex-col gap-2 text-[clamp(3.2rem,6vw,4.9rem)] font-semibold leading-none tracking-tight md:max-w-none md:text-[clamp(4.5rem,5.8vw,6.8rem)]">
-                <span className="inline-flex w-fit px-3 py-1 text-white md:px-4 md:py-1.5">
+                <span
+                  className="inline-flex w-fit px-3 py-1 md:px-4 md:py-1.5"
+                  style={{
+                    background: "linear-gradient(115deg, #5bb8f5 0%, #4a9fe8 15%, #7b5ea7 45%, #c0522a 70%, #e07840 85%, #f0a060 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                    color: "transparent",
+                  }}
+                >
                   Take your seat
                 </span>
-                <span className="inline-flex w-fit whitespace-nowrap px-3 py-1 font-sans italic font-[300] text-[var(--color-offwhite)] md:px-4 md:py-1.5">
+                <span
+                  className="inline-flex w-fit whitespace-nowrap px-3 py-1 font-sans italic font-[300] md:px-4 md:py-1.5"
+                  style={{
+                    background: "linear-gradient(115deg, #5bb8f5 0%, #4a9fe8 15%, #7b5ea7 45%, #c0522a 70%, #e07840 85%, #f0a060 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                    color: "transparent",
+                  }}
+                >
                   in the Majlis
                 </span>
               </h1>

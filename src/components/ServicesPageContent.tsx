@@ -333,7 +333,16 @@ export default function ServicesPageContent() {
 
 				<div className="relative mx-auto flex max-w-5xl flex-col items-center text-center">
 					<p className="mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-[var(--color-silver)]/55">Services</p>
-					<h1 className="mx-auto max-w-4xl text-[clamp(3.2rem,7vw,3.8rem)] font-light tracking-[-0.05em] !text-white">
+					<h1
+						className="mx-auto max-w-4xl text-5xl font-light leading-[0.95] tracking-tight md:text-7xl lg:text-8xl"
+						style={{
+							background: "linear-gradient(115deg, #5bb8f5 0%, #4a9fe8 15%, #7b5ea7 45%, #c0522a 70%, #e07840 85%, #f0a060 100%)",
+							WebkitBackgroundClip: "text",
+							WebkitTextFillColor: "transparent",
+							backgroundClip: "text",
+							color: "transparent",
+						}}
+					>
 						What We Offer
 					</h1>
 					<p className="mx-auto mt-5 max-w-[700px] text-[18px] leading-relaxed text-[var(--color-silver)]/85">
