@@ -116,10 +116,10 @@ export default function AboutPageContent() {
 
 			{/* ── SECTION 2 — FULL-WIDTH PHOTO ── */}
 			<img
-				src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80"
+				src="/blog/blog-ripple-collective/ripple-image-2.jpeg"
 				alt="Modern studio workspace"
 				className="block w-full object-cover"
-				style={{ height: 340 }}
+				style={{ height: 150 }}
 			/>
 
 			{/* ── SECTION 3 — STATEMENT + STATS ── */}
@@ -146,64 +146,8 @@ export default function AboutPageContent() {
 				</div>
 			</section>
 
-			{/* ── SECTION 4 — CTA BLOCK ── */}
-			<section className="relative w-full overflow-hidden" style={{ height: 440 }}>
-				<img
-					src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&q=80"
-					alt="Team collaboration"
-					className="absolute inset-0 w-full h-full object-cover"
-				/>
-				<div className="absolute inset-0" style={{ background: "rgba(0,0,0,0.4)" }} />
-
-				{/* White card */}
-				<div className="absolute right-[7%] top-1/2 -translate-y-1/2 w-[280px] bg-white rounded-xl p-8 shadow-[0_8px_40px_rgba(0,0,0,0.12)]">
-					<h3 className="text-[17px] font-semibold leading-[1.3] tracking-[-0.02em] text-[var(--color-navy)] mb-3">
-						Turning your digital ambitions into reality!
-					</h3>
-					<p className="text-[13px] leading-relaxed text-[var(--color-silver)] mb-5">
-						We help you build more than just a website — we help you build a lasting digital presence.
-					</p>
-					<a href="/contact" className="inline-flex items-center rounded-full bg-[var(--color-navy)] px-5 py-2.5 text-[12px] font-semibold text-white tracking-[0.06em] transition-colors hover:bg-[var(--color-charcoal)]">
-						Get in touch →
-					</a>
-					<div className="mt-6 flex flex-col gap-3">
-						{[
-							{ title: "Expert Creative Direction", sub: "With personalised strategy and deep industry expertise." },
-							{ title: "Seamless Project Delivery", sub: undefined as string | undefined },
-							{ title: "End-to-End Support", sub: undefined as string | undefined },
-						].map((item) => (
-							<div key={item.title} className="flex gap-2.5 items-start">
-								<div className="w-[18px] h-[18px] rounded-full border border-[var(--color-silver)] flex items-center justify-center text-[9px] text-[var(--color-blue)] flex-shrink-0 mt-[2px]">✓</div>
-								<div>
-									<p className="text-[12px] font-semibold text-[var(--color-navy)] leading-snug">{item.title}</p>
-									{item.sub && <p className="text-[11px] text-[var(--color-silver)] mt-0.5">{item.sub}</p>}
-								</div>
-							</div>
-						))}
-					</div>
-				</div>
-			</section>
-
-			{/* ── SECTION 5 — TRUSTED PARTNER (dark) ── */}
-			<section className="bg-[var(--color-navy)] px-6 py-20 md:px-12 md:py-28">
-				<div className="mx-auto max-w-5xl">
-					<h2 className="text-[clamp(1.4rem,3vw,2rem)] font-light tracking-[-0.03em] text-white text-center mb-12">
-						Your Trusted Digital Partner
-					</h2>
-					<div className="flex flex-wrap gap-4 justify-center">
-						{features.map((card) => (
-							<div key={card.title} className="w-[195px] flex-shrink-0 rounded-lg border border-white/10 bg-white/5 p-6">
-								{card.icon}
-								<p className="text-[14px] font-semibold text-white mt-4 mb-2">{card.title}</p>
-								<p className="text-[12px] leading-relaxed text-[var(--color-silver)]">{card.text}</p>
-							</div>
-						))}
-					</div>
-				</div>
-			</section>
-
 			{/* ── SECTION 6 — TEAM (3 people) ── */}
-			<section className="bg-white px-6 py-20 md:px-12 md:py-28">
+			{/* <section className="bg-white px-6 py-20 md:px-12 md:py-28">
 				<div className="mx-auto max-w-5xl">
 					<h2 className="text-[clamp(1.6rem,3.5vw,2.4rem)] font-light tracking-[-0.03em] text-[var(--color-navy)] text-center mb-12">
 						Meet Our Amazing Team
@@ -218,7 +162,7 @@ export default function AboutPageContent() {
 						))}
 					</div>
 				</div>
-			</section>
+			</section> */}
 
 		</div>
 	);
