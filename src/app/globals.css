@@ -160,6 +160,13 @@ h4 {
 	flex-shrink: 0 !important;
 }
 
+/* ── Mobile CTA safe-area ─────────────────────────── */
+@media (max-width: 767px) {
+	body {
+		padding-bottom: 56px;
+	}
+}
+
 /* ── Reduced motion preferences ───────────────────── */
 @media (prefers-reduced-motion: reduce) {
 
