@@ -3,10 +3,10 @@
 import { motion } from "framer-motion";
 
 const stats = [
-	{ num: "150+", label: "Projects Delivered", desc: "Every project reflects our commitment to craft, speed, and quality." },
-	{ num: "80+", label: "Happy Clients", desc: "Happy clients trust us for seamless digital experiences." },
-	{ num: "4", label: "Core Specialisms", desc: "Branding, technology, marketing, and AI consultation." },
-	{ num: "98%", label: "Satisfaction Rate", desc: "High satisfaction rate from loyal, returning clients." },
+	{ num: "150+", label: "Projects Delivered", desc: "From startups to established brands across the region" },
+	{ num: "80+", label: "Clients Served", desc: "Long-term partnerships built on trust and results" },
+	{ num: "4", label: "Core Specialisms", desc: "Branding, Web, AI & Automation, Social & E-Commerce" },
+	{ num: "98%", label: "Client Satisfaction", desc: "Because our work speaks — and our clients stay" },
 ];
 
 const features = [
@@ -73,13 +73,13 @@ export default function AboutPageContent() {
 				</motion.div>
 
 				<motion.div className="relative mx-auto flex max-w-5xl flex-col items-center text-center" initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}>
-					<p className="mb-5 text-xs font-light uppercase tracking-[0.28em] text-[var(--color-silver)]/55">About Majlis Studio</p>
+					<p className="mb-5 text-xs font-light uppercase tracking-[0.28em] text-[var(--color-silver)]/55">ABOUT MAJLIS STUDIO</p>
 					<h1 className="text-5xl font-light leading-[0.95] tracking-tight md:text-7xl lg:text-8xl flex flex-col items-center gap-3">
 						<span style={{ background: "linear-gradient(115deg, #5bb8f5 0%, #4a9fe8 15%, #7b5ea7 45%, #c0522a 70%, #e07840 85%, #f0a060 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", color: "transparent" }}>
-							Rooted in majlis.
+							Rooted in culture.
 						</span>
 						<span className="italic font-[200]" style={{ background: "linear-gradient(115deg, #5bb8f5 0%, #4a9fe8 15%, #7b5ea7 45%, #c0522a 70%, #e07840 85%, #f0a060 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", color: "transparent" }}>
-							Redefining the digital space
+							Built for the digital age.
 						</span>
 					</h1>
 				</motion.div>
@@ -88,26 +88,27 @@ export default function AboutPageContent() {
 			{/* ── SECTION 1 — INTRO ── */}
 			<section className="bg-white px-6 py-24 md:px-20 md:py-32">
 				<div className="max-w-7xl">
+					<p className="mb-6 text-sm font-semibold uppercase tracking-[0.2em] text-[var(--color-navy)]/60">OUR STORY</p>
 					<h2 className="text-[clamp(2.2rem,6vw,4.8rem)] font-light leading-[1.05] tracking-[-0.04em] text-[var(--color-navy)] mb-10">
 						<em className="italic">Elevate your brand </em>with precision and purpose.{" "}
 						<br className="hidden md:block" />
 						<span className="font-light text-[var(--color-silver)]">Shaping digital stories since 2020.</span>
 					</h2>
 					<p className="text-[20px] md:text-[24px] leading-relaxed text-[var(--color-silver)] max-w-4xl mb-16">
-						At Majlis Studio, we&apos;re redefining how brands grow in the digital age by blending creative strategy with technical excellence. Our mission is to make digital transformation simple, transparent, and deeply personalised for every client.
+						At Majlis Studio, we believe every brand has a story worth telling — and a future worth building. Born in Dubai and rooted in the spirit of the majlis, we bring people, ideas, and technology together to create digital experiences that are bold, purposeful, and built to last.
 					</p>
 					
 					<div className="flex flex-wrap gap-10 md:gap-20">
 						<div className="max-w-[340px] text-center border border-[var(--color-silver)]/20 p-8 rounded-xl bg-[var(--color-offwhite)]/30">
-							<p className="text-[18px] font-bold uppercase tracking-[0.2em] text-[var(--color-navy)] mb-4">Mission</p>
+							<p className="text-[18px] font-bold uppercase tracking-[0.2em] text-[var(--color-navy)] mb-4">MISSION</p>
 							<p className="text-[16px] leading-relaxed text-[var(--color-charcoal)]">
-								Our mission is to simplify digital transformation through trust, transparency, expertise, care, commitment, and innovation.
+								Our mission is to make digital transformation simple, strategic, and deeply personal — empowering every client to grow with confidence in an ever-changing digital world.
 							</p>
 						</div>
 						<div className="max-w-[340px] text-center border border-[var(--color-silver)]/20 p-8 rounded-xl bg-[var(--color-offwhite)]/30">
-							<p className="text-[18px] font-bold uppercase tracking-[0.2em] text-[var(--color-navy)] mb-4">Vision</p>
+							<p className="text-[18px] font-bold uppercase tracking-[0.2em] text-[var(--color-navy)] mb-4">VISION</p>
 							<p className="text-[16px] leading-relaxed text-[var(--color-charcoal)]">
-								Our vision is to redefine brand experiences through innovation, excellence, accessibility, trust, technology, and lasting creative value.
+								Our vision is to be the most trusted creative and technology partner for ambitious brands across the Middle East and beyond — where culture meets innovation.
 							</p>
 						</div>
 					</div>
@@ -130,7 +131,7 @@ export default function AboutPageContent() {
 							Don&apos;t just build a brand — <em className="italic">experience growth</em> with intention.
 						</h2>
 						<p className="flex-1 min-w-[220px] text-[15px] leading-relaxed text-[var(--color-silver)] max-w-[380px]">
-							Don&apos;t just launch a website — discover a smoother, smarter path to digital success with us. Our team brings deep market knowledge, creative excellence, and measurable client results.
+							We don&apos;t believe in one-size-fits-all solutions. Every strategy we craft is rooted in your market, your audience, and your ambition. From AI-powered automation to culturally-led branding, we deliver work that moves the needle — and tells your story the right way.
 						</p>
 					</div>
 

@@ -177,8 +177,8 @@ export default function SiteFooter() {
                 <span className="mt-0.5 text-white">
                   <MailIcon />
                 </span>
-                <a href="mailto:hello@majlistudio.com" className="transition-colors duration-200 hover:text-white">
-                  hello@majlistudio.com
+                <a href="mailto:info@majlistudio.com" className="transition-colors duration-200 hover:text-white">
+                  info@majlistudio.com
                 </a>
               </li>
               <li className="flex items-start gap-3 text-sm text-[#888]">
