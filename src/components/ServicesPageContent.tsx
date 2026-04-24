@@ -312,30 +312,6 @@ export default function ServicesPageContent() {
 					<div className="absolute inset-0 bg-black/65" />
 				</div>
 
-				<div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center">
-					<svg
-						viewBox="0 0 1440 860"
-						className="h-full w-full max-w-[1400px] opacity-20"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-						aria-hidden
-					>
-						<path
-							d="M240 760 V360 C240 190 390 90 720 90 C1050 90 1200 190 1200 360 V760"
-							stroke="currentColor"
-							className="text-[var(--color-silver)]/35"
-							strokeWidth="1"
-							vectorEffect="non-scaling-stroke"
-						/>
-						<path
-							d="M420 760 V350 C420 250 520 170 720 170 C920 170 1020 250 1020 350 V760"
-							stroke="currentColor"
-							className="text-[var(--color-silver)]/20"
-							strokeWidth="1"
-							vectorEffect="non-scaling-stroke"
-						/>
-					</svg>
-				</div>
 
 				<div className="relative z-20 mx-auto flex max-w-5xl flex-col items-center text-center">
 					<p className="mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-[var(--color-silver)]/80">Services</p>
