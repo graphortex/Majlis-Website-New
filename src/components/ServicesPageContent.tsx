@@ -25,8 +25,7 @@ const offerSections: OfferSection[] = [
 		title: "Branding",
 		description:
 			"Crafting iconic visual identities and product designs that resonate with your audience and leave a lasting impression.",
-		image:
-			"https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1400&q=80",
+		image: "/Cover images/1_Branding Cover.jpg",
 		imageAlt: "Creative team discussing branding concepts",
 		items: [
 			{
@@ -51,8 +50,7 @@ const offerSections: OfferSection[] = [
 		title: "Technology",
 		description:
 			"Building robust, scalable digital infrastructures, web applications, and intelligent systems engineered for the modern enterprise.",
-		image:
-			"https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=80",
+		image: "/Cover images/1_App Dev Cover.jpg",
 		imageAlt: "Technology circuit board and engineering infrastructure",
 		items: [
 			{
@@ -89,8 +87,7 @@ const offerSections: OfferSection[] = [
 		title: "Growth Marketing",
 		description:
 			"Data-driven strategies and automation to accelerate customer acquisition, boost loyalty, and scale brand visibility exponentially.",
-		image:
-			"https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1400&q=80",
+		image: "/Cover images/1_Growth Marketing cover.jpg",
 		imageAlt: "Marketing growth analytics displayed on screens",
 		items: [
 			{
@@ -115,8 +112,7 @@ const offerSections: OfferSection[] = [
 		title: "AI Consultation",
 		description:
 			"Empowering teams and executives with bespoke AI strategies, process automation, and operational intelligence.",
-		image:
-			"https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=80",
+		image: "/Cover images/1_AI cover.jpg",
 		imageAlt: "AI consultation dashboard and automation workflows",
 		items: [
 			{
@@ -306,10 +302,20 @@ export default function ServicesPageContent() {
 	return (
 		<div className="text-[var(--color-charcoal)]">
 			<section className="relative isolate overflow-hidden bg-[var(--color-navy)] px-6 pt-44 pb-24 text-[var(--color-offwhite)] md:px-12 md:pt-56 md:pb-28">
-				<div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+				{/* Background Image with Overlay */}
+				<div className="absolute inset-0 z-0">
+					<img 
+						src="/Cover images/1_Branding Cover.jpg" 
+						alt="" 
+						className="h-full w-full object-cover"
+					/>
+					<div className="absolute inset-0 bg-black/65" />
+				</div>
+
+				<div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center">
 					<svg
 						viewBox="0 0 1440 860"
-						className="h-full w-full max-w-[1400px] opacity-30"
+						className="h-full w-full max-w-[1400px] opacity-20"
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg"
 						aria-hidden
@@ -331,8 +337,8 @@ export default function ServicesPageContent() {
 					</svg>
 				</div>
 
-				<div className="relative mx-auto flex max-w-5xl flex-col items-center text-center">
-					<p className="mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-[var(--color-silver)]/55">Services</p>
+				<div className="relative z-20 mx-auto flex max-w-5xl flex-col items-center text-center">
+					<p className="mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-[var(--color-silver)]/80">Services</p>
 					<h1
 						className="mx-auto max-w-4xl text-5xl font-light leading-[0.95] tracking-tight md:text-7xl lg:text-8xl"
 						style={{
@@ -345,7 +351,7 @@ export default function ServicesPageContent() {
 					>
 						What We Offer
 					</h1>
-					<p className="mx-auto mt-5 max-w-[700px] text-[18px] leading-relaxed text-[var(--color-silver)]/85">
+					<p className="mx-auto mt-6 max-w-[700px] text-[18px] leading-relaxed text-[var(--color-silver)]">
 						Integrated digital solutions that elevate customer experience and accelerate brand growth.
 					</p>
 				</div>

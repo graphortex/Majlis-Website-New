@@ -14,6 +14,15 @@ type FeedCard = InsightCard;
 
 const homepageInsights: InsightCard[] = [
   {
+    category: "Product Launch",
+    readTime: "5 mins read",
+    date: "Apr 2026",
+    title: "Anthropic Launches Claude Design",
+    author: "Majlis Studio",
+    href: "/insights/claude-design-launch",
+    image: "/blog/blog-claude-new-design-tool/anthropic-claude-logo.webp",
+  },
+  {
     category: "Feature",
     readTime: "2 mins read",
     date: "Apr 2026",
@@ -25,14 +34,13 @@ const homepageInsights: InsightCard[] = [
 ];
 
 const insightsHeroMain: FeedCard = {
-  category: "Feature",
-  readTime: "2 mins read",
+  category: "Product Launch",
+  readTime: "5 mins read",
   date: "Apr 2026",
-  title: "Majlis Studio reps attended Final Draft.",
+  title: "Anthropic Launches Claude Design",
   author: "Majlis Studio",
-  href: "/insights/ripple-collective-april-18",
-  image:
-    "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1600&q=80",
+  href: "/insights/claude-design-launch",
+  image: "/blog/blog-claude-new-design-tool/anthropic-claude-logo.webp",
 };
 
 function InsightCard({ card, compact = false, showAuthor = false }: { card: FeedCard; compact?: boolean; showAuthor?: boolean }) {

@@ -60,8 +60,18 @@ export default function AboutPageContent() {
 
 			{/* ── MAJLIS HERO ── */}
 			<section className="relative isolate overflow-hidden bg-[var(--color-navy)] px-6 pt-44 pb-28 text-[var(--color-offwhite)] md:min-h-[80vh] md:px-12 md:pt-56 md:pb-36">
+				{/* Background Image with Overlay */}
+				<div className="absolute inset-0 z-0">
+					<img 
+						src="/Cover images/1_Branding Cover.jpg" 
+						alt="" 
+						className="h-full w-full object-cover"
+					/>
+					<div className="absolute inset-0 bg-black/65" />
+				</div>
+
 				<motion.div
-					className="pointer-events-none absolute inset-0 flex items-center justify-center"
+					className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center"
 					initial={{ scale: 0.92, opacity: 0.18 }}
 					animate={{ scale: 1, opacity: 0.28 }}
 					transition={{ duration: 1.2, ease: "easeOut" }}
