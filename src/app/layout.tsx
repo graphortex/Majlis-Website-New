@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import AppShell from "../components/AppShell";
-import MobileCallCta from "../components/seo/MobileCallCta";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://majlistudio.com"),
@@ -103,7 +102,6 @@ export default function RootLayout({
         className="flex min-h-full flex-col bg-[var(--color-offwhite)] font-sans text-[var(--color-charcoal)] selection:bg-[var(--color-blue)] selection:text-white"
       >
         <AppShell>{children}</AppShell>
-        <MobileCallCta />
       </body>
     </html>
   );
