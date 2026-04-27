@@ -4,9 +4,16 @@ type CaseStudyCard = {
   category: string;
   title: string;
   accent: string;
+  videoSrc?: string;
 };
 
 const caseStudyCards: CaseStudyCard[] = [
+  {
+    category: "Branding",
+    title: "Ibtikar: complete branding crafted by Majlis Studio.",
+    accent: "from-[#e6edf5] via-[#bac9d9] to-[#7c93ad]",
+    videoSrc: "/case-studies-assets/ibtikar-motion-video.mp4",
+  },
   {
     category: "Food",
     title: "Saffron Table: a refined restaurant identity and booking experience.",
@@ -73,7 +80,20 @@ function CaseStudyCardBlock({ card, showClickOverlay = false }: { card: CaseStud
   return (
     <article className="group">
       <div className="relative aspect-[4/5] overflow-hidden border border-[var(--color-silver)] bg-white">
-        <div className={`absolute inset-0 bg-gradient-to-br ${card.accent} transition-transform duration-700 ease-out group-hover:scale-[1.03]`} />
+        {card.videoSrc ? (
+          <video
+            src={card.videoSrc}
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+            aria-label={card.title}
+          />
+        ) : (
+          <div className={`absolute inset-0 bg-gradient-to-br ${card.accent} transition-transform duration-700 ease-out group-hover:scale-[1.03]`} />
+        )}
         <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.38),transparent_38%,rgba(255,255,255,0.1)_72%,rgba(0,0,0,0.04))]" />
         <div className="absolute inset-0 opacity-35 [background-image:radial-gradient(rgba(17,17,17,0.18)_1px,transparent_1px)] [background-size:18px_18px]" />
 

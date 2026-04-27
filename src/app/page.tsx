@@ -1,4 +1,4 @@
-// import { CaseStudiesSection } from "../components/CaseStudiesSection";
+import { CaseStudiesSection } from "../components/CaseStudiesSection";
 import HeroSection from "../components/HeroSection";
 import ScrollHighlightSection from "../components/ScrollHighlightSection";
 import ServiceCardsSection from "../components/ServiceCardsSection";
@@ -95,7 +95,7 @@ export default function Home() {
 			<ServiceCardsSection />
 
 			{/* Existing sections below */}
-			{/* <CaseStudiesSection /> */}
+			<CaseStudiesSection />
 
 			<WhatWeDoSection />
 

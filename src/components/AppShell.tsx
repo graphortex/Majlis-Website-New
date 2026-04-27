@@ -18,6 +18,20 @@ export default function AppShell({ children }: AppShellProps) {
   const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
+    const scrollToTop = () => {
+      lenisRef.current?.scrollTo(0, { immediate: true });
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    };
+
+    // Run on next frame so new route content is mounted before forcing position.
+    const frameId = window.requestAnimationFrame(scrollToTop);
+
+    return () => {
+      window.cancelAnimationFrame(frameId);
+    };
+  }, [pathname]);
+
+  useEffect(() => {
     // Prefer native scrolling for browsers/devices where wheel interception can be unreliable.
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const isCoarsePointer = window.matchMedia("(pointer: coarse)").matches;
@@ -49,7 +63,7 @@ export default function AppShell({ children }: AppShellProps) {
       lenis.destroy();
       lenisRef.current = null;
     };
-  }, []);
+  }, [pathname]);
 
   return (
     <PageLoader key={pathname} isHomepage={pathname === "/"}>

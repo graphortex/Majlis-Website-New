@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 function StarIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" className="h-3.5 w-3.5 shrink-0 fill-current">
@@ -15,73 +17,22 @@ function ArrowIcon() {
   );
 }
 
-function CurvedArrowIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5 stroke-current stroke-[1.6] fill-none">
-      <path d="M17 7H8.5a4.5 4.5 0 0 0 0 9H14" />
-      <path d="M14 3l4 4-4 4" />
-    </svg>
-  );
-}
-
-function CompassIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5 stroke-current stroke-[1.6] fill-none">
-      <circle cx="12" cy="12" r="8" />
-      <path d="M10 14l2-5 5-2-2 5-5 2z" fill="currentColor" stroke="none" />
-    </svg>
-  );
-}
-
-function StarBurstIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-4 w-4 stroke-current stroke-[1.6] fill-none">
-      <path d="M12 3.5l1.3 3.9 3.9 1.3-3.9 1.3L12 14l-1.3-3.9-3.9-1.3 3.9-1.3L12 3.5z" fill="currentColor" stroke="none" />
-      <path d="M12 18.5l.8 2.2.7-2.2 2.2-.7-2.2-.8-.7-2.2-.8 2.2-2.2.8 2.2.7z" fill="currentColor" stroke="none" opacity="0.75" />
-    </svg>
-  );
-}
-
-function GridIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5 stroke-current stroke-[1.6] fill-none">
-      <rect x="4" y="4" width="6" height="6" />
-      <rect x="14" y="4" width="6" height="6" />
-      <rect x="4" y="14" width="6" height="6" />
-      <rect x="14" y="14" width="6" height="6" />
-    </svg>
-  );
-}
-
-function CrescentIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5 stroke-current stroke-[1.6] fill-none">
-      <path d="M16.8 4.8A8.8 8.8 0 1 0 19.2 19.2 7.8 7.8 0 1 1 16.8 4.8z" fill="currentColor" stroke="none" />
-    </svg>
-  );
-}
-
-function CircleWIcon() {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5 stroke-current stroke-[1.5] fill-none">
-      <circle cx="12" cy="12" r="9" />
-      <path d="M7.5 9.5l1.7 5.2 2.8-3.5 2.8 3.5 1.7-5.2" />
-    </svg>
-  );
-}
-
 const trustedCards = [
-  { kind: "logo", label: "U-Turn", icon: <CurvedArrowIcon /> },
-  { kind: "logo", label: "Swiss", icon: null, cropped: true },
-  { kind: "logo", label: "theo", icon: null, script: true },
+  { kind: "logo", label: "Power Integrated", src: "/trusted-visionaries-images/15 power integrated.png", alt: "Power Integrated logo" },
+  { kind: "logo", label: "Trusted Logo 1", src: "/trusted-visionaries-images/1_Logo 1.png", alt: "Trusted visionary logo 1" },
+  { kind: "logo", label: "Trusted Logo 2", src: "/trusted-visionaries-images/1_Logo 2.png", alt: "Trusted visionary logo 2" },
   { kind: "stat", label: "86+", sublabel: "Trusted clients" },
-  { kind: "logo", label: "KOBE", icon: <GridIcon /> },
-  { kind: "logo", label: "Manila.", icon: null, serif: true },
-  { kind: "logo", label: "Trace", icon: <CompassIcon /> },
-  { kind: "logo", label: "Hamilton", icon: <StarBurstIcon /> },
-  { kind: "logo", label: "Silicon.V", icon: null },
-  { kind: "logo", label: "Invert", icon: <CrescentIcon /> },
-  { kind: "logo", label: "waveless", icon: <CircleWIcon /> },
+  { kind: "logo", label: "Trusted Logo 3", src: "/trusted-visionaries-images/1_Logo 3.png", alt: "Trusted visionary logo 3" },
+  { kind: "logo", label: "Trusted Logo 4", src: "/trusted-visionaries-images/1_Logo 4.png", alt: "Trusted visionary logo 4" },
+  { kind: "logo", label: "Trusted Logo 5", src: "/trusted-visionaries-images/1_Logo 5.png", alt: "Trusted visionary logo 5" },
+  { kind: "logo", label: "Trusted Logo 6", src: "/trusted-visionaries-images/1_Logo 6 .png", alt: "Trusted visionary logo 6" },
+  { kind: "logo", label: "Trusted Logo 7", src: "/trusted-visionaries-images/1_Logo 7.png", alt: "Trusted visionary logo 7" },
+  { kind: "logo", label: "Trusted Badge 07", src: "/trusted-visionaries-images/1-07.png", alt: "Trusted visionary badge 07" },
+  { kind: "logo", label: "Trusted Badge 08", src: "/trusted-visionaries-images/1-08.png", alt: "Trusted visionary badge 08" },
+  { kind: "logo", label: "Trusted Badge 09", src: "/trusted-visionaries-images/1-09.png", alt: "Trusted visionary badge 09" },
+  { kind: "logo", label: "Trusted Badge 10", src: "/trusted-visionaries-images/1-10.png", alt: "Trusted visionary badge 10" },
+  { kind: "logo", label: "Trusted Badge 11", src: "/trusted-visionaries-images/1-11.png", alt: "Trusted visionary badge 11" },
+  { kind: "logo", label: "Trusted Badge 12", src: "/trusted-visionaries-images/1-12.png", alt: "Trusted visionary badge 12" },
   { kind: "cta", label: "Join us now" },
 ];
 
@@ -110,25 +61,8 @@ function TrustedCard({ item }: { item: (typeof trustedCards)[number] }) {
 
   return (
     <div className="group flex h-[80px] md:h-[110px] items-center justify-center rounded-[12px] md:rounded-[16px] bg-[var(--color-offwhite)]/5 px-2 md:px-4 text-[var(--color-offwhite)] transition-colors duration-200 hover:bg-[var(--color-offwhite)]/10">
-      <div className="flex items-center gap-1.5 md:gap-2 text-[var(--color-offwhite)]/60 transition-opacity duration-200 group-hover:text-[var(--color-offwhite)]">
-        {item.icon ? <span className="flex items-center justify-center scale-75 md:scale-100 text-[var(--color-offwhite)]/60 transition-colors duration-200 group-hover:text-[var(--color-offwhite)]">{item.icon}</span> : null}
-        {item.script ? (
-          <span className="font-sans text-[18px] md:text-[26px] font-[200] italic tracking-[-0.04em] text-[var(--color-offwhite)]/60 transition-colors duration-200 group-hover:text-[var(--color-offwhite)]">
-            {item.label}
-          </span>
-        ) : item.cropped ? (
-          <span className="overflow-hidden text-[16px] md:text-[24px] font-semibold tracking-[0.28em] text-[var(--color-offwhite)]/60 transition-colors duration-200 group-hover:text-[var(--color-offwhite)]">
-            <span className="block translate-x-1 scale-x-[1.15]">{item.label}</span>
-          </span>
-        ) : item.serif ? (
-          <span className="font-sans text-[17px] md:text-[25px] font-[200] tracking-[-0.03em] text-[var(--color-offwhite)]/60 transition-colors duration-200 group-hover:text-[var(--color-offwhite)]">
-            {item.label}
-          </span>
-        ) : (
-          <span className="text-[15px] md:text-[22px] font-semibold tracking-[-0.04em] text-[var(--color-offwhite)]/60 transition-colors duration-200 group-hover:text-[var(--color-offwhite)]">
-            {item.label}
-          </span>
-        )}
+      <div className="relative flex h-full w-full items-center justify-center">
+        <Image src={item.src} alt={item.alt} fill sizes="(max-width: 768px) 50vw, 180px" className="object-contain p-3 md:p-4 transition-opacity duration-200 group-hover:opacity-100" />
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
-import { notFound } from "next/navigation";
+import { CaseStudiesPageContent } from "../../components/CaseStudiesSection";
 
 export default function CaseStudiesPage() {
-  notFound();
+  return <CaseStudiesPageContent />;
 }
