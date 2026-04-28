@@ -101,7 +101,7 @@ export default function Home() {
 
 			<SocialProofSection />
 
-			<MetricsTrackRecordSection />
+			{/* <MetricsTrackRecordSection /> */}
 
 			<ClientTestimonialsSection />
 

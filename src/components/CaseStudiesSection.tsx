@@ -79,7 +79,7 @@ const caseStudyCards: CaseStudyCard[] = [
 function CaseStudyCardBlock({ card, showClickOverlay = false }: { card: CaseStudyCard; showClickOverlay?: boolean }) {
   return (
     <article className="group">
-      <div className="relative aspect-[4/5] overflow-hidden border border-[var(--color-silver)] bg-white">
+      <div className="relative aspect-square overflow-hidden border border-[var(--color-silver)] bg-white">
         {card.videoSrc ? (
           <video
             src={card.videoSrc}

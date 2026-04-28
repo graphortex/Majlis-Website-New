@@ -17,7 +17,12 @@ function ArrowIcon() {
   );
 }
 
-const trustedCards = [
+type TrustedCardItem =
+  | { kind: "logo"; label: string; src: string; alt: string }
+  | { kind: "stat"; label: string; sublabel: string }
+  | { kind: "cta"; label: string };
+
+const trustedCards: TrustedCardItem[] = [
   { kind: "logo", label: "Power Integrated", src: "/trusted-visionaries-images/15 power integrated.png", alt: "Power Integrated logo" },
   { kind: "logo", label: "Trusted Logo 1", src: "/trusted-visionaries-images/1_Logo 1.png", alt: "Trusted visionary logo 1" },
   { kind: "logo", label: "Trusted Logo 2", src: "/trusted-visionaries-images/1_Logo 2.png", alt: "Trusted visionary logo 2" },
