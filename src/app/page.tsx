@@ -99,7 +99,7 @@ export default function Home() {
 
 			<WhatWeDoSection />
 
-			<SocialProofSection />
+			{/* <SocialProofSection /> */}
 
 			{/* <MetricsTrackRecordSection /> */}
 

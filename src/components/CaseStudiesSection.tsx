@@ -5,6 +5,7 @@ type CaseStudyCard = {
   title: string;
   accent: string;
   videoSrc?: string;
+  imgSrc?: string;
 };
 
 const caseStudyCards: CaseStudyCard[] = [
@@ -15,64 +16,16 @@ const caseStudyCards: CaseStudyCard[] = [
     videoSrc: "/case-studies-assets/ibtikar-motion-video.mp4",
   },
   {
-    category: "Food",
-    title: "Saffron Table: a refined restaurant identity and booking experience.",
-    accent: "from-[#f5efe8] via-[#d8c4ad] to-[#ad8c6e]",
-  },
-  {
-    category: "Retail",
-    title: "Miro Atelier: a quiet luxury commerce system for a modern flagship.",
-    accent: "from-[#f7f7f7] via-[#dcdcdc] to-[#b6b6b6]",
-  },
-  {
-    category: "Education",
-    title: "North Star Academy: a clean admissions journey for ambitious families.",
-    accent: "from-[#eef3f8] via-[#c7d4e1] to-[#9eaec0]",
-  },
-  {
-    category: "Hospitality",
-    title: "Maison Mira: a polished digital presence for a boutique hotel collection.",
-    accent: "from-[#f3eee9] via-[#d7ccc0] to-[#a98d73]",
-  },
-  {
-    category: "Lifestyle",
-    title: "Luma Club: a member-first portal for elevated wellness and events.",
-    accent: "from-[#f6f3ef] via-[#ddd2c4] to-[#b29f8a]",
-  },
-  {
-    category: "Tech",
-    title: "Orbit Labs: a sharper product story for a high-trust software brand.",
+    category: "Company Profile",
+    title: "Ibtikar: professional company profile and corporate presentation.",
     accent: "from-[#eef0f4] via-[#c5ced8] to-[#95a2b4]",
+    videoSrc: "/case-studies-assets/Ibtikar-company-profile-video.mp4",
   },
   {
-    category: "Food",
-    title: "Cedar Room: a cinematic launch campaign for a chef-led concept.",
-    accent: "from-[#f7efe8] via-[#e0c7ae] to-[#bd9472]",
-  },
-  {
-    category: "Retail",
-    title: "Nomad Goods: a minimalist storefront with stronger product storytelling.",
-    accent: "from-[#f8f8f8] via-[#e1e1e1] to-[#a9a9a9]",
-  },
-  {
-    category: "Education",
-    title: "Atelier One: an admissions-first website for a design school launch.",
-    accent: "from-[#f0f4f3] via-[#c7d7d1] to-[#97aea7]",
-  },
-  {
-    category: "Hospitality",
-    title: "Solara House: an elevated reservation flow for a private dining venue.",
-    accent: "from-[#f4f1ee] via-[#d9cec2] to-[#b29781]",
-  },
-  {
-    category: "Lifestyle",
-    title: "Verve Studio: a brand refresh for a modern wellness destination.",
-    accent: "from-[#f3f5f7] via-[#d9e0e8] to-[#a7b5c5]",
-  },
-  {
-    category: "Tech",
-    title: "Pillar AI: a more human product narrative for enterprise buyers.",
-    accent: "from-[#f2f2f2] via-[#d4d4d4] to-[#9f9f9f]",
+    category: "Branding",
+    title: "Maithana: a cohesive branding experience.",
+    accent: "from-[#f5efe8] via-[#d8c4ad] to-[#ad8c6e]",
+    imgSrc: "/case-studies-assets/maithana-cover-image.png",
   },
 ];
 
@@ -90,6 +43,12 @@ function CaseStudyCardBlock({ card, showClickOverlay = false }: { card: CaseStud
             preload="metadata"
             className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
             aria-label={card.title}
+          />
+        ) : card.imgSrc ? (
+          <img
+            src={card.imgSrc}
+            alt={card.title}
+            className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
           />
         ) : (
           <div className={`absolute inset-0 bg-gradient-to-br ${card.accent} transition-transform duration-700 ease-out group-hover:scale-[1.03]`} />
@@ -162,10 +121,10 @@ export function CaseStudiesPageContent() {
             <h1 className="text-[clamp(3rem,5vw,3.75rem)] !font-light tracking-[-0.06em] text-[var(--color-navy)]">
               Case Studies
             </h1>
-            <span className="translate-y-3 text-sm text-[var(--color-silver)]">(137)</span>
+            <span className="translate-y-3 text-sm text-[var(--color-silver)]">({caseStudyCards.length})</span>
           </div>
 
-          <div className="flex flex-wrap gap-3">
+          {/* <div className="flex flex-wrap gap-3">
             {[
               "Industries v",
               "Expertise v",
@@ -178,7 +137,7 @@ export function CaseStudiesPageContent() {
                 {filter}
               </button>
             ))}
-          </div>
+          </div> */}
         </div>
 
         <CaseStudiesGrid cards={caseStudyCards} showClickOverlay />
