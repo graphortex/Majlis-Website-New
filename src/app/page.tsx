@@ -99,11 +99,11 @@ export default function Home() {
 
 			<WhatWeDoSection />
 
-			{/* <SocialProofSection /> */}
+			<SocialProofSection />
 
 			{/* <MetricsTrackRecordSection /> */}
 
-			<ClientTestimonialsSection />
+			{/* <ClientTestimonialsSection /> */}
 
 			<InsightsSection />
 		</div>
